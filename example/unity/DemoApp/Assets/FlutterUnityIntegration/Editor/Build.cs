@@ -139,7 +139,8 @@ public class Build : EditorWindow
 
         EditorUserBuildSettings.iOSBuildConfigType = iOSBuildType.Release;
 
-        var options = BuildOptions.AcceptExternalModificationsToPlayer;
+        var options = BuildOptions.AllowDebugging;
+        // var options = BuildOptions.AcceptExternalModificationsToPlayer;
         var report = BuildPipeline.BuildPlayer(
             GetEnabledScenes(),
             path,
